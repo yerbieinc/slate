@@ -9,6 +9,7 @@ toc_footers:
 
 includes:
   - quickstart
+  - retrying
 search: true
 
 code_clipboard: true
@@ -20,7 +21,7 @@ Yerbie is a job queue and scheduler. A system like Yerbie is used to distribute 
 
 To initiate a job, a client sends a request to Yerbie indicating a queue, data and delay, and Yerbie then makes that data available on the queue after the specified delay.
 
-A worker then runs a job associated with the data when it is available on the queue.
+A worker polls, and runs a job associated with the data when it is available on the queue.
 
 Currently, Yerbie has a Java client library with more language support planned.
 
